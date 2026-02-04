@@ -1,0 +1,12 @@
+[
+    {
+        "tokenin": "openai_placeholder_key",
+        "tokenout": "sk-real-openai-key-abc123...",
+        "endpoints": ["api.openai.com", "api.openai.us"]
+    },
+    {
+        "tokenin": "anthropic_placeholder",
+        "tokenout": "sk-ant-real-key-def456...",
+        "endpoints": ["api.anthropic.com"]
+    }
+]
