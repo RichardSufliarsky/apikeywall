@@ -109,6 +109,12 @@ Once running, configure your AI tools to use the **placeholder keys** (`tokenin`
 ### Discovering API Endpoints (Optional)
 For a comprehensive list of AI API endpoints, you can consult community resources like the [`models.dev` API database](https://models.dev/api.json).
 
+Linux:
+```bash
+wget https://models.dev/api.json
+jq -r 'keys[] as $k | "\(.[$k] | .name), \(.[$k] | .api)"' api.json | grep -v null
+```
+
 ## 🧠 Advanced Configuration
 
 ### Running as a Transparent Bridge (Advanced) ###
