@@ -2,7 +2,6 @@ import asyncio
 import json
 import logging
 from pathlib import Path
-from time import monotonic
 from typing import TypedDict
 from mitmproxy import ctx, http
 
@@ -126,7 +125,6 @@ class ApiKeyWall:
         while True:
             if ctx.master.should_exit.is_set():
                 return
-            now = monotonic()
             if CONFIG_PATH.exists():
                 self._reload_if_present()
             await asyncio.sleep(1)
